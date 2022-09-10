@@ -1,7 +1,6 @@
 #!/bin/env python3
 
-from os.path import exists
-from os import getenv, remove, getcwd, listdir
+from os import getenv, getcwd, listdir
 from subprocess import run
 
 HOME = getenv("HOME")

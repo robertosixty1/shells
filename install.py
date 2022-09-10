@@ -14,8 +14,10 @@ if getenv("USER") == "root":
 
 run(["rm", "-f", f"{HOME}/.zshrc"])
 run(["rm", "-f", f"{HOME}/.bashrc"])
+run(["rm", "-f", f"{HOME}/.posixshellrc-personal"])
 
 run(["ln", "-s", f"{CWD}/.zshrc", f"{HOME}/.zshrc"])
 run(["ln", "-s", f"{CWD}/.bashrc", f"{HOME}/.bashrc"])
+run(["ln", "-s", f"{CWD}/.posixshellrc-personal", f"{HOME}/.posixshellrc-personal"])
 
 print("INTALLED SUCCESSFULLY!")

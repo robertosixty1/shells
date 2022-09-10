@@ -10,6 +10,7 @@ export EDITOR='vim'
 export VISUAL='emacs'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='less'
+export TOR_DIR='/home/rosyx/.opt/tor-browser_en-US'
 
 #Ibus settings if you need them
 #type ibus-setup in terminal to change settings and start the daemon
@@ -228,7 +229,4 @@ alias rmgitcache="rm -r ~/.cache/git"
 #moving your personal files and folders from /personal to ~
 alias personal='cp -Rf /personal/* ~'
 
-#create a file called .bashrc-personal and put all your personal aliases
-#in there. They will not be overwritten by skel.
-
-[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
+[[ -f ~/.posixshellrc-personal ]] && . ~/.posixshellrc-personal

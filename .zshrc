@@ -330,7 +330,4 @@ alias rmgitcache="rm -r ~/.cache/git"
 #moving your personal files and folders from /personal to ~
 alias personal='cp -Rf /personal/* ~'
 
-#create a file called .zshrc-personal and put all your personal aliases
-#in there. They will not be overwritten by skel.
-
-[[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
+[[ -f ~/.posixshellrc-personal ]] && . ~/.posixshellrc-personal

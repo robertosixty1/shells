@@ -1,3 +1,5 @@
+echo "( .-.)"
+
 function addtopath()
 {
     echo "PATH=\$PATH:$1" >> ~/.bashrc-personal
@@ -32,6 +34,11 @@ EOF
     python3 ${wallpaper_s}
 }
 
+### EXPORTS ###
+
+export PAGER='less'
+export EDITOR='nvim'
+export VISUAL='code'
 
 ### ALIASES ###
 
@@ -43,9 +50,31 @@ alias emacs="emacsclient -c -a emacs"
 alias demacs="/bin/emacs"
 alias hiy="git"
 alias last_installed="ls --time-style=+%d\ %b\ %G\ %H:%M -lct /etc | tail -1 | awk '{print \$6, \$7, \$8, \$9}'"
+alias wget="wget -c"
 
-echo "( .-.)"
-echo "SEE TODO.md!"
+# list
+alias ls='ls --color=auto -lah'
+alias l='ls'
+alias l.="ls -A | egrep '^\.'"
+
+# fix obvious typos
+alias cd..='cd ..'
+alias pdw='pwd'
+
+# Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+### PATH ###
+
+if [ -d "$HOME/.bin" ]; then
+    PATH="$HOME/.bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 PATH=$PATH:/home/rosyx/.opt/porth/
 PATH=$PATH:/home/rosyx/.opt/boomer/

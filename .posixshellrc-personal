@@ -39,6 +39,7 @@ EOF
 export PAGER='less'
 export EDITOR='nvim'
 export VISUAL='code'
+export TOR_DIR='/home/rosyx/.opt/tor-browser_en-US'
 
 ### ALIASES ###
 

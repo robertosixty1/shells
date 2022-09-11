@@ -2,6 +2,7 @@
 
 from os import getenv, getcwd, listdir
 from subprocess import run
+from shutil import move
 
 HOME = getenv("HOME")
 CWD = getcwd()
@@ -22,6 +23,8 @@ run(["ln", "-s", f"{CWD}/.bashrc", f"{HOME}/.bashrc"])
 run(["ln", "-s", f"{CWD}/.posixshellrc-personal", f"{HOME}/.posixshellrc-personal"])
 
 # Install zsh-syntax-highlighting
-run(["git", "clone", "https://github.com/zsh-users/zsh-syntax-highlighting.git", f"{HOME}/.zsh-syntax-highlighting"])
+run(["wget", "https://github.com/zsh-users/zsh-syntax-highlighting/archive/refs/tags/0.7.1.tar.gz", "-O", f"{HOME}/.cache/a.tar.gz"])
+run(["tar", "-axvf", f"{HOME}/.cache/a.tar.gz", "-C", f"{HOME}/.cache"])
+move(f"{HOME}/.cache/zsh-syntax-highlighting-0.7.1", f"{HOME}/.zshsh")
 
 print("INTALLED SUCCESSFULLY!")

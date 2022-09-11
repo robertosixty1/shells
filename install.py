@@ -1,6 +1,7 @@
 #!/bin/env python3
 
 from os import getenv, getcwd, listdir
+from os.path import isdir, isfile
 from subprocess import run
 from shutil import move
 
@@ -23,8 +24,14 @@ run(["ln", "-s", f"{CWD}/.bashrc", f"{HOME}/.bashrc"])
 run(["ln", "-s", f"{CWD}/.posixshellrc-personal", f"{HOME}/.posixshellrc-personal"])
 
 # Install zsh-syntax-highlighting
-run(["wget", "https://github.com/zsh-users/zsh-syntax-highlighting/archive/refs/tags/0.7.1.tar.gz", "-O", f"{HOME}/.cache/a.tar.gz"])
-run(["tar", "-axvf", f"{HOME}/.cache/a.tar.gz", "-C", f"{HOME}/.cache"])
-move(f"{HOME}/.cache/zsh-syntax-highlighting-0.7.1", f"{HOME}/.zshsh")
+
+ZSHSYNTAXHIGHLIGHTING_PATH = f"{HOME}/.zshsh"
+if not isdir(ZSHSYNTAXHIGHLIGHTING_PATH) and not isfile(ZSHSYNTAXHIGHLIGHTING_PATH):
+    run(["wget", "https://github.com/zsh-users/zsh-syntax-highlighting/archive/refs/tags/0.7.1.tar.gz", "-O", f"{HOME}/.cache/a.tar.gz"])
+    run(["tar", "-axvf", f"{HOME}/.cache/a.tar.gz", "-C", f"{HOME}/.cache"])
+    move(f"{HOME}/.cache/zsh-syntax-highlighting-0.7.1", ZSHSYNTAXHIGHLIGHTING_PATH)
+
+# Install powerlevel0k
+run(["git", "clone", "--depth=1", "https://github.com/romkatv/powerlevel10k.git", f"{HOME}/.powerlevel10k"])
 
 print("INTALLED SUCCESSFULLY!")

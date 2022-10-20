@@ -37,7 +37,7 @@ EOF
 export PAGER='less'
 export EDITOR='nvim'
 export VISUAL='code'
-export TOR_DIR='/home/rosyx/.opt/tor-browser_en-US'
+export TOR_DIR='/home/roberto/.opt/tor-browser_en-US'
 
 ### ALIASES ###
 
@@ -75,14 +75,14 @@ if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-PATH=$PATH:/home/rosyx/.opt/porth/
-PATH=$PATH:/home/rosyx/.opt/boomer/
-PATH=$PATH:/home/rosyx/.opt/ascii-image-converter/
-PATH=$PATH:/home/rosyx/.opt/godot/
-PATH=$PATH:/home/rosyx/.opt/syfetch/
-PATH=$PATH:/home/rosyx/.opt/mcpelauncher
-PATH=$PATH:/home/rosyx/.opt/cava
-PATH=$PATH:/home/rosyx/.opt/tlauncher
-PATH=$PATH:/home/rosyx/.opt/tcc/bin
-PATH=$PATH:/home/rosyx/.cargo/bin
-PATH=$PATH:/home/rosyx/.opt/luaserver/bin
+PATH=$PATH:/home/roberto/.opt/porth/
+PATH=$PATH:/home/roberto/.opt/boomer/
+PATH=$PATH:/home/roberto/.opt/ascii-image-converter/
+PATH=$PATH:/home/roberto/.opt/godot/
+PATH=$PATH:/home/roberto/.opt/syfetch/
+PATH=$PATH:/home/roberto/.opt/mcpelauncher
+PATH=$PATH:/home/roberto/.opt/cava
+PATH=$PATH:/home/roberto/.opt/tlauncher
+PATH=$PATH:/home/roberto/.opt/tcc/bin
+PATH=$PATH:/home/roberto/.cargo/bin
+PATH=$PATH:/home/roberto/.opt/luaserver/bin

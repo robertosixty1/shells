@@ -1,7 +1,6 @@
 function addtopath()
 {
-    echo "PATH=\$PATH:$1" >> ~/.bashrc-personal
-    echo "PATH=\$PATH:$1" >> ~/.zshrc-personal
+    echo "PATH=\$PATH:$1" >> ~/.posixshellrc-personal
 }
 
 function changeBright()
@@ -86,3 +85,4 @@ PATH=$PATH:/home/roberto/.opt/tlauncher
 PATH=$PATH:/home/roberto/.opt/tcc/bin
 PATH=$PATH:/home/roberto/.cargo/bin
 PATH=$PATH:/home/roberto/.opt/luaserver/bin
+PATH=$PATH:/home/roberto/.opt/VSCode-linux-x64/bin

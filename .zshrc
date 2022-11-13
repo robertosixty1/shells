@@ -8,6 +8,12 @@ fi
 # Customize PROMPT
 PROMPT="%n@%m:.../%2~ %# "
 
+# History
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+
 # Enable zsh syntax highlighting
 source ~/.zshsh/zsh-syntax-highlighting.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme

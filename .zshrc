@@ -14,6 +14,13 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
 
+# Shortcuts
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[[3~" delete-char
+
 # Enable zsh syntax highlighting
 source ~/.zshsh/zsh-syntax-highlighting.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme

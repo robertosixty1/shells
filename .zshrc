@@ -20,6 +20,8 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
+bindkey "^[[3;5~" kill-word
+bindkey "^H" backward-kill-word
 
 # Enable zsh syntax highlighting
 source ~/.zshsh/zsh-syntax-highlighting.zsh

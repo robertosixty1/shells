@@ -10,6 +10,13 @@ function changeBright()
     xrandr --output LVDS-1 --brightness $1
 }
 
+function fix_dunst()
+{
+    if [ -f /usr/share/dbus-1/services/org.knopwob.dunst.service ]; then
+        sudo rm /usr/share/dbus-1/services/org.knopwob.dunst.service
+    fi
+}
+
 function set_random_wallpaper {
     wallpaper_s=~/.cache/set_random_wallpaper.py
     cat <<EOF > ${wallpaper_s}

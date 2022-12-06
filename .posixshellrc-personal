@@ -94,3 +94,4 @@ PATH=$PATH:/home/roberto/.cargo/bin
 PATH=$PATH:/home/roberto/.opt/luaserver/bin
 PATH=$PATH:/home/roberto/.opt/VSCode-linux-x64/bin
 PATH=$PATH:/home/roberto/.opt/mugshot-0.4.3/bin
+PATH=$PATH:/home/roberto/.nimble/bin
